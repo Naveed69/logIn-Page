@@ -1,7 +1,7 @@
 const LoggedIn = () => {
   return (
     <>
-      <p>Welcome, user!</p>
+      <p>Welcome, user</p>
     </>
   );
 };

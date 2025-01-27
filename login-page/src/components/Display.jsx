@@ -26,25 +26,23 @@ const Display = () => {
         <>
           {falselogin ? <p>Invalid username or password</p> : <></>}
           <form onSubmit={(e) => handle(e)}>
-            <lable>
-              Username
-              <input
-                type="text"
-                name="username"
-                placeholder="username"
-                required
-              />
-            </lable>
+            <lable>Username</lable>
+            <input
+              type="text"
+              name="username"
+              placeholder="username"
+              required
+            />
+
             <br />
-            <label>
-              Password
-              <input
-                type="password"
-                name="password"
-                placeholder="password"
-                required
-              />
-            </label>
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="password"
+              required
+            />
+
             <br />
             <button type="submit">Submit</button>
           </form>
