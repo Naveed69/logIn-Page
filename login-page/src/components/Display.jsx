@@ -26,7 +26,7 @@ const Display = () => {
         <>
           {falselogin ? <p>Invalid username or password</p> : <></>}
           <form onSubmit={(e) => handle(e)}>
-            <lable>Username</lable>
+            <lable>Username:</lable>
             <input
               type="text"
               name="username"
@@ -35,7 +35,7 @@ const Display = () => {
             />
 
             <br />
-            <label>Password</label>
+            <label>Password:</label>
             <input
               type="password"
               name="password"
