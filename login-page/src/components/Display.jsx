@@ -27,7 +27,7 @@ const Display = () => {
       ) : (
         <>
           {falselogin ? <p>Invalid username or password</p> : <></>}
-          <form onSubmit={(e) => handle(e)}>
+          <form name="login" onSubmit={(e) => handle(e)}>
             <lable>Username:</lable>
             <input
               type="text"
