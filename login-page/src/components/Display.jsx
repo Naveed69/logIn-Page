@@ -3,20 +3,22 @@ import LoggedIn from "./LoggedIn";
 const Display = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [falselogin, setFalselogin] = useState(false);
+  const [userName, setuserName] = useState("");
+  const [password, setPassword] = useState("");
   const handle = (e) => {
     e.preventDefault();
-    if (
-      e.target.username.value === "user" &&
-      e.target.password.value === "password"
-    ) {
+    if (userName === "user" && password === "password") {
       setLoggedIn(true);
       setFalselogin(false);
-      e.target.username.value = "";
-      e.target.password.value = "";
+      setuserName("");
+      setPassword("");
     } else {
       setFalselogin(true);
     }
   };
+  // const handleUser=()=>{
+  //   setuserName
+  // }
   return (
     <>
       <h1>Login Page</h1>
@@ -31,6 +33,8 @@ const Display = () => {
               type="text"
               name="username"
               placeholder="username"
+              value={userName}
+              onChange={(e) => setuserName(e.target.value)}
               required
             />
 
@@ -39,7 +43,9 @@ const Display = () => {
             <input
               type="password"
               name="password"
+              value={password}
               placeholder="password"
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
 
